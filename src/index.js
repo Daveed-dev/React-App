@@ -1,10 +1,13 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+import ReactDom from 'react-dom/client';
+import App from './App';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
 
 const root = ReactDom.createRoot(document.querySelector('#root'));
 
 root.render(
   <>
-    <h1></h1>
+    <App />
   </>,
 );
