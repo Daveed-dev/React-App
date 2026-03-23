@@ -1,14 +1,24 @@
 import React from 'react';
-import Header from './Components/Header';
-import Main from './Components/Main';
-import Footer from './Components/Footer';
+import Hotel from './Hotel';
+import Data from './HotelData';
 
 const App = () => {
   return (
     <>
-      <Header />
-      <Main />
-      <Footer />
+      <div className='container'>
+        <h1>Hotel Rooms</h1>
+        {Data.map((values, index) => {
+          return (
+            <Hotel
+              key={index}
+              id={values.id}
+              img={values.imgSrc}
+              title={values.title}
+              btn={values.btn}
+            />
+          );
+        })}
+      </div>
     </>
   );
 };
