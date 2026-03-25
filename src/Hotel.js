@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Hotel = (props) => {
   return (
@@ -18,4 +19,14 @@ const Hotel = (props) => {
     </>
   );
 };
+
+// Hotel.propTypes = {
+//   img: PropTypes.string,
+//   btn: PropTypes.string,
+//   title: PropTypes.number,
+// };
+
+// Hotel.defaultProps = {
+//   title: 'Hello',
+// };
 export default Hotel;

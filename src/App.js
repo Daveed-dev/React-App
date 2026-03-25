@@ -1,25 +1,42 @@
-import React from 'react';
-import Hotel from './Hotel';
-import Data from './HotelData';
+import React, { useState } from 'react';
+import Friend from './Friend';
+
+const data = [
+  {
+    id: 1,
+    name: 'david',
+  },
+  {
+    id: 2,
+    name: 'james',
+  },
+  {
+    id: 3,
+    name: 'dapo',
+  },
+  {
+    id: 4,
+    name: 'koolz',
+  },
+];
 
 const App = () => {
+  const [friends, setfriends] = useState(data);
   return (
     <>
-      <div className='container'>
-        <h1>Hotel Rooms</h1>
-        {Data.map((values, index) => {
-          return (
-            <Hotel
-              key={index}
-              id={values.id}
-              img={values.imgSrc}
-              title={values.title}
-              btn={values.btn}
-            />
-          );
-        })}
+      <div className='app'>
+        <h3>Number of Friends : {friends.length} </h3>
+        <Friend friend={friends} />
+
+        <button className='btn' onClick={() => setfriends([])}>
+          clear all
+        </button>
+        <button className='btn' onClick={() => setfriends(data)}>
+          get all
+        </button>
       </div>
     </>
   );
 };
+
 export default App;
