@@ -1,40 +1,22 @@
-import React, { useState } from 'react';
-import Friend from './Friend';
-
-const data = [
-  {
-    id: 1,
-    name: 'david',
-  },
-  {
-    id: 2,
-    name: 'james',
-  },
-  {
-    id: 3,
-    name: 'dapo',
-  },
-  {
-    id: 4,
-    name: 'koolz',
-  },
-];
+import React from 'react';
+import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Home from './Components/Home';
+import About from './Components/About';
+import Service from './Components/Service';
+import Contact from './Components/Contact';
+import Navbar from './Navbar';
 
 const App = () => {
-  const [friends, setfriends] = useState(data);
   return (
     <>
-      <div className='app'>
-        <h3>Number of Friends : {friends.length} </h3>
-        <Friend friend={friends} />
-
-        <button className='btn' onClick={() => setfriends([])}>
-          clear all
-        </button>
-        <button className='btn' onClick={() => setfriends(data)}>
-          get all
-        </button>
-      </div>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/service' element={<Service />} />
+        <Route path='/contact' element={<Contact />} />
+      </Routes>
     </>
   );
 };
