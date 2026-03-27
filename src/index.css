@@ -1,5 +1,30 @@
-.btn {
-  background-color: green;
-  outline: none;
-  padding: 0.3rem;
+.logo {
+}
+.logo img {
+  width: 80px;
+  margin-right: 1rem;
+}
+.carousel-item img {
+  height: 550px;
+  object-fit: cover;
+}
+.card-img-top {
+  height: 200px;
+}
+.footer h5,
+p {
+  font-size: 1.4rem;
+}
+/* About */
+.about img {
+  height: 350px;
+}
+.active {
+  border-bottom: 3px solid black;
+}
+
+@media screen and (max-width: 600px) {
+  .carousel-item img {
+    height: 300px;
+  }
 }
