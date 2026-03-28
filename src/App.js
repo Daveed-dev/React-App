@@ -7,6 +7,8 @@ import Service from './Components/Service';
 import Contact from './Components/Contact';
 import Navbar from './Navbar';
 import Footer from './Components/Footer';
+import Error from './Components/Error';
+import Signin from './Components/Signin';
 
 const App = () => {
   return (
@@ -17,6 +19,8 @@ const App = () => {
         <Route path='/about' element={<About />} />
         <Route path='/service' element={<Service />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/signin/:username' element={<Signin />} />
+        <Route path='*' element={<Error />} />
       </Routes>
       <Footer />
     </>

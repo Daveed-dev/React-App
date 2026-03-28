@@ -20,4 +20,3 @@ const Data = [
 ];
 
 export default Data;
-console.log(Data);

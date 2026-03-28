@@ -48,6 +48,11 @@ const Navbar = () => {
                   Contact
                 </NavLink>
               </li>
+              <button className='btn btn-success ms-2 nav-item'>
+                <Link to='/signin' className={activeClass}>
+                  SignIn
+                </Link>
+              </button>
             </ul>
             <form className='d-flex' role='search'>
               <input
